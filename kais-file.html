@@ -4,21 +4,33 @@
 <head>
     <title> Kai's part</title>
     <link href="kais-file.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 
 <body>
-    <div id="bounding-box">
-        <button class="btns" id="btn1"></button>
-        <button class="btns" id="btn2"></button>
-        <button class="btns" id="btn3"></button>
-        <button class="btns" id="btn4"></button>
-        <button class="btns" id="btn5"></button>
-    </div>
-    <div class="scenes" id="scene1"></div>
-    <div class="scenes" id="scene2"></div>
-    <div class="scenes" id="scene3"></div>
-    <div class="scenes" id="scene4"></div>
-    <div class="scenes" id="scene5"></div>
+    <button id="roundButton"><span class="material-icons">
+        menu
+        </span></button>
+    <div id="container">
+        <h1 id="title">Info pages:</h1>
+        <ul>
+            <li>Info about Mars</li>
+            <li>How to live on Mars</li>
+            <li>About SpaceX</li>
+            <li>Mars colony concept <article></article></li>
+            <li>Take the Test</li>
+        </ul>
+    </div>
+<div className="show" id="flyoutMenu">
+    <h2><a href="#">Home</a></h2>
+    <h2><a class="items" href="#">Info about Mars</a></h2>
+    <h2><a class="items" href="#">How to live on Mars</a></h2>
+    <h2><a class="items" href="#">About SpaceX</a></h2>
+    <h2><a class="items" href="#">Gallery</a></h2>
+    <h2><a class="items" href="#">Take the test</a></h2>
+</div>
+</div>
 
     <script src="kais-file.js"></script>
 </body>

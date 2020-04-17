@@ -1,62 +1,78 @@
-#bounding-box{
-    display: flex;
-    position: absolute;
-    left: 0;
-    bottom: 0;
+body {
+    background-color: #EEE;
+    font-family: Helvetica, Arial, sans-serif;
+    padding: 25px;
+    margin: 0;
+    overflow: auto;
+}
+
+
+
+#title{
+    font-family: VT323;
+}
+
+li{
+    list-style-type: none;
+}
+
+li:hover{
+    cursor: pointer;
+    color: #56beff;
+}
+
+#container li {
+    margin-bottom: 10px;
+}
+
+#roundButton {
+    border-style: none;
+    outline: none;
+    transition: transform .3s cubic-bezier(0, .52, 0, 1);
+}
+
+
+#roundButton:hover {
+    cursor: pointer;
+    transform: scale(1.2, 1.2);
+}
+
+#roundButton:active {
+    border-color: #003557;
+    background-color: #FFF;
+}
+
+
+ 
+#flyoutMenu h2 a {
+    color: rgb(255, 255, 255);
+    font-family: PT Sans;
+    font-size: 14pt;    
+    margin-left: 15px;
+    text-decoration: none;
+}
+ 
+#flyoutMenu h2 a:hover {
+    color: #56beff;
+    /* text-decoration: underline; */
+}  
+
+#flyoutMenu.show {
+    transform: translate3d(0vw, 0, 0);
+}  
+
+#flyoutMenu {
+    width: 50vw;
     height: 100vh;
-    width: 100vw;
-    border: black 2px solid;
-}
-
-.btns{
-    border-radius: 100%;
-    height: 30px;
-    width: 30px;
-}
-
-#btn1{
-    background-color: blue;
-    position: absolute;
-    left: 200px;
-    bottom: 300px;
-}
-
-#btn2{
-    background-color: crimson;
-    position: absolute;
-    left: 400px;
-    bottom: 100px;
-}
-
-#btn3{
-    background-color: darkorange;
-    position: absolute;
-    left: 1200px;
-    bottom: 375px
-}
-
-#btn4{
-    background-color: greenyellow;
-    position: absolute;
-    left: 750px;
-    bottom: 300px
-}
-
-#btn5{
-    background-color: yellow;
-    position: absolute;
-    left: 900px;
-    bottom: 90px
-}
-
-
-.scenes{
-    display: none;
-    background-color: hotpink;
-    position:absolute;
+    background-color: rgb(0, 0, 0);
+    position: fixed;
+    top: 0;
     left: 0;
-    bottom: 0;
-    height: 100vh;
-    width: 100vw;
-    border: hotpink solid 2px;
+    transform: translate3d(-100vw, 0, 0);
+    transition: transform .3s cubic-bezier(0, .52, 0, 1);
+    overflow: scroll;
 }
+
+.show {
+    transform: translate3d(0vw, 0, 0);
+} 
